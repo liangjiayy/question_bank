@@ -279,7 +279,7 @@ const useRegex = ref(false); // 默认不启用正则
 <template>
   <div class="question-page">
     <!-- 进度条 -->
-    <div><el-progress :percentage="currentIndex / currentQuestions.length"
+    <div><el-progress :percentage="(currentIndex + 1) * 100 / currentQuestions.length"
         :format="() => `${currentIndex + 1} / ${currentQuestions.length}`" /></div>
     <!-- 题目 -->
     <h3 class="title">
